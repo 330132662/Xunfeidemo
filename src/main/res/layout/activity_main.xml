@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="reqVoice"
+        android:text="语音识别" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startunder"
+        android:text="语义理解" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="introduce"
+        android:text="介绍" />
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="bequiet"-->
+        <!--android:text="一键静音" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="cover"-->
+        <!--android:text="恢复音量" />-->
+
+    <TextView
+        android:id="@+id/temprecvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="说的话显示到这里" />
+
+    <TextView
+        android:id="@+id/temprecrersult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回结果显示到这里" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <WebView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp" />
+    </LinearLayout>
+</LinearLayout>

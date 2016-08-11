@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.czh.xfdemo"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/java/libs']
+            jni.srcDirs = [] // This prevents the auto generation of Android.mk
+        }}
+}
+
+dependencies {
+    compile 'com.android.support:design:24.0.0'
+    //    compile 'io.reactivex:rxandroid:1.1.0'
+    //    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    // 网络请求 同时依赖compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    //json解析为DAO模型
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.lzp.floatingactionbutton:floatingactionbuttonplus:0.2.3'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile files('src/main/java/libs/Sunflower.jar')
+    compile files('src/main/java/libs/Msc.jar')
+}
